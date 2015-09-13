@@ -1,11 +1,16 @@
   **MSR605 Card Reader python interface and GUI**
 
-
+  -------------------------
   Edited: 12 September 2015
+  -----------------------
   Author: Manwinder Sidhu
+  --------------------------------
   Contact: sidhum@mail.uoguelph.ca
+  --------------------------------
   Platform: Windows
+  ---------------------------------------------------------------------------------------------
   Python: 3.4.3 (I originally wrote this in 2.7 but I think I had issues with Tkinter)
+  -------------------------------------------------------------------
   Legal Documentation: LICENSE (file) and also in some of the classes
 
   ------------------  
