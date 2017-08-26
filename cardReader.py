@@ -18,13 +18,13 @@
         You should have received a copy of the GNU General Public License
         along with MSR605 Card Reader/Writer.  If not, see <http://www.gnu.org/licenses/>.
         
-        MSR605 Card Reader/Writer version 1, Copyright (C) 2015 of Manwinder Sidhu
+        MSR605 Card Reader/Writer version 1, Copyright (C) 2017 of Manwinder Sidhu
         
-    Edited: 23 April 2015
+    Edited: 25 August 2017
     Author: Manwinder Sidhu
-    Contact: sidhum@mail.uoguelph.ca
+    Contact: manwindersapps@gmail.com
     Platform: Windows
-    Python: 3.4.3
+    Python: 3.5.2
 
     Description: This is an interface that allows manipulation of the MSR605 magnetic
                  stripe card reader/writer.
@@ -113,7 +113,7 @@ class CardReader():
             implemented if you follow the programming manual
         
         Attributes:
-            A lot of constants below lol
+            A lot of constants lol
     """
     
     
@@ -139,7 +139,8 @@ class CardReader():
         #this looks for the first available COM port, can be changed to look for the MSR
         for x in range(0, 255):
             try:
-                self.__serialConn = serial.Serial(x)  # opens the serial port
+
+                self.__serialConn = serial.Serial('COM' + str(x))  # opens the serial port
             except(serial.SerialException, OSError):
                 pass #continues going through the loop
             
@@ -203,6 +204,16 @@ class CardReader():
         
         print ("\nATTEMPTING TO RESET THE MSR605")
         
+        # flusing the input and output solves the issue where the MSR605 app/gui would need
+        # to be restarted if there was an issue like say swiping the card backwards, I 
+        # found out about the flushing input & output before the reset from this MSR605
+        # project: https://github.com/steeve/msr605/blob/master/msr605.py
+        # I assume before there would be data left on the buffer which would mess up
+        # the reading and writing of commands since there would be extra data which
+        # wasn't expected
+        self.__serialConn.flushInput()
+        self.__serialConn.flushOutput()
+
         #writes the command code for resetting the MSR605
         self.__serialConn.write(ESCAPE + RESET)
         
@@ -269,7 +280,7 @@ class CardReader():
                 ]
         
                 [
-                    A1234568^John Snow^           0123,
+                    A1234568^Jon Snow^           0123,
                     1234567890=01010,
                     9876
                 ]

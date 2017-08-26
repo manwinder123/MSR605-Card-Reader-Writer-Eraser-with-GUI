@@ -18,13 +18,13 @@
         You should have received a copy of the GNU General Public License
         along with MSR605 Card Reader/Writer.  If not, see <http://www.gnu.org/licenses/>.
         
-        MSR605 Card Reader/Writer version 1, Copyright (C) 2015 of Manwinder Sidhu
+        MSR605 Card Reader/Writer version 1, Copyright (C) 2017 of Manwinder Sidhu
         
-    Edited: 23 April 2015
+    Edited: 25 August 2017
     Author: Manwinder Sidhu
-    Contact: sidhum@mail.uoguelph.ca
+    Contact: manwindersapps@gmail.com
     Platform: Windows
-    Python: 3.4.3
+    Python: 3.5.2
 
     Description: This contains custom exception classes for the cardReader interface 
     

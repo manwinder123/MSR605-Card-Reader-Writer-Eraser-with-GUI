@@ -1,7 +1,7 @@
   **MSR605 Card Reader python interface and GUI**
 
   -------------------------
-  Edited: 6 August 2017
+  Edited: 25  August 2017
   -----------------------
   Author: Manwinder Sidhu
   --------------------------------
@@ -9,7 +9,7 @@
   --------------------------------
   Platform: Windows
   ---------------------------------------------------------------------------------------------
-  Python: 3.4.3 (I originally wrote this in 2.7 but I think I had issues with Tkinter)
+  Python: 3.5.2 (I originally wrote this in 2.7 but I think I had issues with Tkinter)
   -------------------------------------------------------------------
   Legal Documentation: LICENSE (file) and also in some of the classes
 
@@ -38,17 +38,13 @@
   for the device (https://www.triades.net/downloads/MSR605%20Programmer's%20Manual.pdf).
   The only reason I actually created this project was because my parents wanted a points
   card at their business and I didn't want them to spend a large amount of money on it. I
-  did successfully create the application and it has been working great for about a month.
-  I started this project in April and had thought it was ready to go but it had a few bugs
-  and I left for work in May and wasn't able to access the device. I finished it in late
-  august and thought I'd throw it on github cause the MSR605 projects I seen didn't have a
+  did successfully create the application and it has been working great for a few years now.
+  I started this project in April 2015 and had thought it was ready to go but it had a few bugs
+  and I left for work in May 2015 and wasn't able to access the device. I finished it in late
+  August 2015 and thought I'd throw it on github cause the MSR605 projects I seen didn't have a
   GUI included with them. A nice GUI comes with the MSR605 device I got but all it does is
   read, write and erase cards.
-  
-  I want to say that I haven't tested this GUI in a few months, I expect it to have some bugs.
-  When I get back home from school I will test it. The backend of it should be fine, the GUI file
-  might need some updating.
-  
+    
   So the files you guys will have will read, write and erase cards. There are also some other
   things it can do such as diagnostic tests on the device as well as lighting up the LED's. The
   cards can be stored in a database, I added this functionality cause I assumed anybody using this
@@ -93,10 +89,5 @@
   ----
   Bugs
   ----
-  As I have said in the project descripition I haven't tested this GUI in a while. The biggest bug I found that altered
-  the actual functionality was one that didn't set the coercivity after reseting the device (given an error was raised).
-  
-  If setting the coercivity after the device reset doesn't work, you can add in code to restart the application, that usually
-  fixes it.
   
   
