@@ -16,7 +16,7 @@
   ------------------  
   Libraries Required
   ------------------
-  PySerial for communication between the PC and MSR605 (http://pyserial.sourceforge.net/index.html)
+  PySerial for communication between the PC and MSR605 (https://github.com/pyserial/pyserial)
   
   Tkinter for the GUI
   
