@@ -172,8 +172,7 @@ class GUI(Frame):
             showinfo('Close Connection', 'MSR605 is not connected')
     
     def exception_error_reset(self, title, text):
-        if (error):
-            showerror(title, text)
+        showerror(title, text)
         
         showinfo("Resetting", "Resetting MSR605 because of error")
         self.reset()
